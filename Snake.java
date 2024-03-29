@@ -2,6 +2,7 @@ package com.example.snake;
 
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -189,6 +190,7 @@ public class Snake extends Application {
 class GameOver extends Stage {
     public GameOver(Stage primaryStage, int counter) {
         VBox vbox = new VBox();
+        vbox.setAlignment(Pos.CENTER);
         Label gameOverLabel = new Label("Game Over!");
         Label scoreLabel = new Label("Your Score: " + counter);
         Button restartButton = new Button("Restart");
